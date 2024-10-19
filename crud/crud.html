@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Operation</title>
+
+    <!-- link css -->
+     <link rel="stylesheet" href="crud.css">
+</head>
+<body onload="readAll()">
+
+    <div class="container">
+
+        <div class="form_container">
+            <!-- for creation -->
+            <form action="" class="create_form">
+                <input type="text" class="name" placeholder="Enter name">
+                <input type="email" class="email" placeholder="Enter Email">
+                <input type="number" class="code" placeholder="enter code">
+                <button type="button" onclick="add()">Create</button>
+
+            </form>
+
+            <!-- for updation -->
+             <form action="" class="update_form">
+
+                <input type="text" hidden class="id">
+                <input type="text" class="uname">
+                <input type="email" class="uemail">
+                <input type="number" class="ucode" placeholder="enter code">
+                <button type="button" onclick="update()">Update</button>
+
+             </form>
+
+             <!-- add button -->
+
+             <div class="add_div">
+                <button onclick="create()">Add+</button>
+             </div>
+              
+             <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Code</th>
+                    <th>Action</th>
+                </thead>
+
+                <tbody class="data_table">
+
+                </tbody>
+
+             </table>
+        </div>
+    </div>
+
+    <script src="crud.js"></script>
+</body>
+</html>
